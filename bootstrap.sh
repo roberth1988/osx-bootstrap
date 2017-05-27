@@ -4,6 +4,10 @@
 # copyright Robert Hoppe - nodemash.com
 #
 
+# clear first the shell
+clear
+
+# post first some info
 echo "=========================================================="
 echo "Starting now OSX Bootstrap of Robert Hoppe"
 echo " "
@@ -41,7 +45,8 @@ brew install \
     openssl \
     pcre \
     speedtest_cli \
-    figlet
+    figlet \
+    htop
 
 brew tap homebrew/services
 brew install zsh --disable-etcdir
