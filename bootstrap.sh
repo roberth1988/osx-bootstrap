@@ -4,6 +4,17 @@
 # copyright Robert Hoppe - nodemash.com
 #
 
+echo -e "=========================================================="
+echo -e "Starting now OSX Bootstrap of Robert Hoppe"
+echo -e " "
+echo -e "Repository: https://github.com/roberth1988/osx-bootstrap"
+echo -e "=========================================================="
+echo -e " "
+echo -e " "
+echo -e "The Bootstrapping will start ing 10 seconds."
+
+wait 10
+
 # lets call xcode first
 xcode-select --install
 
@@ -29,10 +40,12 @@ brew install \
     node \
     openssl \
     pcre \
-    speedtest_cli
+    speedtest_cli \
+    figlet
 
 brew tap homebrew/services
 brew install zsh --disable-etcdir
+brew install zsh-completions
 
 # install necessary pip modules
 pip install progressbar \
@@ -81,9 +94,9 @@ sudo -s 'echo /usr/local/bin/zsh >> /etc/shells' && chsh -s /usr/local/bin/zsh
 /usr/local/bin/zsh
 
 # setup computer name
-sudo scutil --set ComputerName "robsmac"
-sudo scutil --set HostName "robsmac"
-sudo scutil --set LocalHostName "robsmac"
+sudo scutil --set ComputerName "RobsMac"
+sudo scutil --set HostName "RobsMac"
+sudo scutil --set LocalHostName "RobsMac"
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "robsmac"
 
 # Key Repeating
@@ -147,5 +160,13 @@ defaults write com.apple.terminal StringEncodings -array 4
 # Disable game center cruft
 defaults write com.apple.gamed Disabled -bool true
 
-# Dotfiles
+# Get dotfile package manager ellipsis.sh
 curl -L ellipsis.sh | sh
+
+# install custom settings
+read -p "Do you want to install the package 'roberth1988/files'? " -n 1 -r
+echo    # (optional) move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    ellipsis install roberth1988/files
+fi
