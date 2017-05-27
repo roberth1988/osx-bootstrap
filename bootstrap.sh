@@ -174,6 +174,9 @@ defaults write com.apple.terminal StringEncodings -array 4
 # Disable game center cruft
 defaults write com.apple.gamed Disabled -bool true
 
+# Disable ext change warning
+defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+
 # Get dotfile package manager ellipsis.sh
 curl -L ellipsis.sh | sh
 
