@@ -4,14 +4,14 @@
 # copyright Robert Hoppe - nodemash.com
 #
 
-echo -e "=========================================================="
-echo -e "Starting now OSX Bootstrap of Robert Hoppe"
-echo -e " "
-echo -e "Repository: https://github.com/roberth1988/osx-bootstrap"
-echo -e "=========================================================="
-echo -e " "
-echo -e " "
-echo -e "The Bootstrapping will start ing 10 seconds."
+echo "=========================================================="
+echo "Starting now OSX Bootstrap of Robert Hoppe"
+echo " "
+echo "Repository: https://github.com/roberth1988/osx-bootstrap"
+echo "=========================================================="
+echo " "
+echo " "
+echo "The Bootstrapping will start ing 10 seconds."
 
 wait 10
 
@@ -80,6 +80,9 @@ pip install progressbar \
     blinker \
     pycountry \
     simplejson
+
+# some folder stuff
+mkdir .ssh
 
 # Ask for the administrator password upfront
 sudo -v
