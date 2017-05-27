@@ -46,7 +46,8 @@ brew install \
     pcre \
     speedtest_cli \
     figlet \
-    htop
+    htop \
+    dialog
 
 brew tap homebrew/services
 brew install zsh --disable-etcdir
@@ -90,13 +91,17 @@ pip install progressbar \
 mkdir .ssh
 
 # Ask for the administrator password upfront
+echo "We need super-user rights to continue the installation"
 sudo -v
 
 # Keep-alive: update existing `sudo` time stamp until `.osx` has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # setup default shell to zsh
-echo "/usr/local/bin/zsh" | sudo tee -a /etc/shells
+echo "Setting zsh as default shell"
+if ! grep -q zsh /etc/shells; then
+    echo "/usr/local/bin/zsh" | sudo tee -a /etc/shells
+fi
 chsh -s /usr/local/bin/zsh
 
 # switch now to zsh
@@ -173,9 +178,13 @@ defaults write com.apple.gamed Disabled -bool true
 curl -L ellipsis.sh | sh
 
 # install custom settings
-read -p "Do you want to install the package 'roberth1988/files'? " -n 1 -r
-echo    # (optional) move to a new line
-if [[ $REPLY =~ ^[Yy]$ ]]
-then
-    ellipsis install roberth1988/files
-fi
+dialog --title "Install dotfiles" \
+--backtitle "ellipsis.sh roberth1988/files repository installation" \
+--yesno "Do you want to install the roberth1988/files?" 7 60
+
+response=$?
+case $response in
+   0) ellipsis install roberth1988/files
+   1) echo "Boostrapping done";;
+   255) echo "[ESC] key pressed.";;
+esac
