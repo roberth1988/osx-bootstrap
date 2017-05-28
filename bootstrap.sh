@@ -181,6 +181,9 @@ defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 # Get dotfile package manager ellipsis.sh
 curl -L ellipsis.sh | sh
 
+# load ellipsis to path
+export PATH=~/.ellipsis/bin:$PATH
+
 # install custom settings
 dialog --title "Install dotfiles" \
 --backtitle "ellipsis.sh roberth1988/files repository installation" \
