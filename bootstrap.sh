@@ -191,7 +191,7 @@ dialog --title "Install dotfiles" \
 
 response=$?
 case $response in
-   0) ellipsis install roberth1988/files
+   0) ellipsis install roberth1988/files;;
    1) echo "Boostrapping done";;
    255) echo "[ESC] key pressed.";;
 esac
