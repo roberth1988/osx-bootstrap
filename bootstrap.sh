@@ -85,7 +85,8 @@ pip install progressbar \
     statsd \
     blinker \
     pycountry \
-    simplejson
+    simplejson \
+    powerline-status
 
 # some folder stuff
 mkdir .ssh
