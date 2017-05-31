@@ -47,7 +47,8 @@ brew install \
     speedtest_cli \
     figlet \
     htop \
-    dialog
+    dialog \
+    httpie
 
 brew tap homebrew/services
 brew install zsh --disable-etcdir
