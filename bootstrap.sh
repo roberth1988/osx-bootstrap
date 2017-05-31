@@ -30,7 +30,6 @@ export PATH=/usr/local/bin:$PATH
 
 brew install \
     git \
-    vim \
     wget \
     python \
     tree \
@@ -50,6 +49,10 @@ brew install \
     dialog \
     httpie
 
+# vim special
+brew installvim --override-system-vi
+
+# zsh special
 brew tap homebrew/services
 brew install zsh --disable-etcdir
 brew install zsh-completions
