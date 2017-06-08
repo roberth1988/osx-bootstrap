@@ -61,6 +61,14 @@ brew install zsh-completions
 # install cask
 brew install cask
 brew cask install java
+brew cask install google-chrome
+brew cask install iterm2
+brew cask install slack
+brew cask install skype
+brew cask install appcleaner
+brew cask install vlc
+brew cask install firefox
+brew cask install the-unarchiver
 
 # install necessary pip modules
 pip install progressbar \
@@ -97,31 +105,12 @@ pip install progressbar \
     simplejson \
     powerline-status
 
-# some folder stuff
-mkdir .ssh
-
 # Ask for the administrator password upfront
 echo "We need super-user rights to continue the installation"
 sudo -v
 
 # Keep-alive: update existing `sudo` time stamp until `.osx` has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
-
-# setup default shell to zsh
-echo "Setting zsh as default shell"
-if ! grep -q zsh /etc/shells; then
-    echo "/usr/local/bin/zsh" | sudo tee -a /etc/shells
-fi
-chsh -s /usr/local/bin/zsh
-
-# switch now to zsh
-/usr/local/bin/zsh
-
-# setup computer name
-sudo scutil --set ComputerName "RobsMac"
-sudo scutil --set HostName "RobsMac"
-sudo scutil --set LocalHostName "RobsMac"
-sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "robsmac"
 
 # Key Repeating
 defaults write -g ApplePressAndHoldEnabled -bool false
@@ -187,20 +176,3 @@ defaults write com.apple.gamed Disabled -bool true
 # Disable ext change warning
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 
-# Get dotfile package manager ellipsis.sh
-curl -L ellipsis.sh | sh
-
-# load ellipsis to path
-export PATH=~/.ellipsis/bin:$PATH
-
-# install custom settings
-dialog --title "Install dotfiles" \
---backtitle "ellipsis.sh roberth1988/files repository installation" \
---yesno "Do you want to install the roberth1988/files?" 7 60
-
-response=$?
-case $response in
-   0) ellipsis install roberth1988/files;;
-   1) echo "Boostrapping done";;
-   255) echo "[ESC] key pressed.";;
-esac
