@@ -57,6 +57,10 @@ brew tap homebrew/services
 brew install zsh --disable-etcdir
 brew install zsh-completions
 
+# install cask
+brew install cask
+brew cask install java
+
 # install necessary pip modules
 pip install progressbar \
     pyOpenSSL \
