@@ -69,6 +69,11 @@ brew cask install appcleaner
 brew cask install vlc
 brew cask install firefox
 brew cask install the-unarchiver
+brew cask install pycharm-ce
+brew cask install phpstorm
+
+# export path for pip
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 
 # install necessary pip modules
 pip install progressbar \
