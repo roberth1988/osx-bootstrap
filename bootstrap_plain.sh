@@ -71,6 +71,7 @@ brew cask install firefox
 brew cask install the-unarchiver
 brew cask install pycharm-ce
 brew cask install phpstorm
+brew cask install rstudio
 
 # export path for pip
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
