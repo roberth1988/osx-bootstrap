@@ -51,7 +51,7 @@ brew install \
     wrk
 
 # vim special
-brew installvim --override-system-vi
+brew install vim --with-override-system-vi
 
 # zsh special
 brew tap homebrew/services
