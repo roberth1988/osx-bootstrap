@@ -48,7 +48,9 @@ brew install \
     htop \
     dialog \
     httpie \
-    wrk
+    wrk \
+    kubectx \
+    kube-ps1
 
 # vim special
 brew install vim --with-override-system-vi
