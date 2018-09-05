@@ -50,7 +50,8 @@ brew install \
     httpie \
     wrk \
     kubectx \
-    kube-ps1
+    kube-ps1 \
+    kubectl
 
 # vim special
 brew install vim --with-override-system-vi
