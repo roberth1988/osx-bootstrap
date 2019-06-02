@@ -61,6 +61,12 @@ brew tap homebrew/services
 brew install zsh --disable-etcdir
 brew install zsh-completions
 
+# kubernetes specific
+brew tap derailed/k9s && brew install k9s
+brew install kube-ps1 \
+    kubectx \
+    stern
+
 # install cask
 brew install cask
 brew cask install java
