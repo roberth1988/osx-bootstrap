@@ -48,7 +48,13 @@ brew install \
     htop \
     dialog \
     httpie \
-    wrk
+    wrk \
+    kubectx \
+    kube-ps1 \
+    kubectl \
+    stern \
+    derailed/k9s/k9s \
+    derailed/popeye/popeye
 
 # vim special
 brew install vim --with-override-system-vi
@@ -181,4 +187,3 @@ defaults write com.apple.gamed Disabled -bool true
 
 # Disable ext change warning
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
-

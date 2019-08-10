@@ -51,7 +51,10 @@ brew install \
     wrk \
     kubectx \
     kube-ps1 \
-    kubectl
+    kubectl \
+    stern \
+    derailed/k9s/k9s \
+    derailed/popeye/popeye
 
 # vim special
 brew install vim --with-override-system-vi
