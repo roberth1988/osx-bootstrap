@@ -54,7 +54,8 @@ brew install \
     kubectl \
     stern \
     derailed/k9s/k9s \
-    derailed/popeye/popeye
+    derailed/popeye/popeye \
+    fzf
 
 # vim special
 brew install vim --with-override-system-vi
