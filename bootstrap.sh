@@ -58,11 +58,11 @@ brew install \
     fzf
 
 # vim special
-brew install vim --with-override-system-vi
+brew install macvim
 
 # zsh special
 brew tap homebrew/services
-brew install zsh --disable-etcdir
+brew install zsh
 brew install zsh-completions
 
 # kubernetes specific
