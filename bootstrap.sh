@@ -79,7 +79,7 @@ pip install progressbar \
     requests \
     dnspython \
     lxml \
-    pydns \
+    py3dns \
     regex \
     csvkit \
     pyaml \
