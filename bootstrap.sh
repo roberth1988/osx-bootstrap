@@ -104,10 +104,8 @@ pip install progressbar \
     blinker \
     pycountry \
     simplejson \
+    suds-jurko \
     powerline-status
-    
-# suds for python3
-pip install bitbucket.org/jurko/suds/get/tip.tar.gz
 
 # some folder stuff
 mkdir .ssh
