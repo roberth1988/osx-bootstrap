@@ -95,7 +95,6 @@ pip install progressbar \
     deepdiff \
     fuzzywuzzy \
     python-Levenshtein \
-    MySQL-python \
     tldextract \
     raven \
     microdata \
