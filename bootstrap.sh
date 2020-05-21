@@ -88,7 +88,6 @@ pip install progressbar \
     beautifulsoup4 \
     vatnumber \
     PyExecJS \
-    suds \
     futures \
     Sphinx \
     chardet \
@@ -107,6 +106,9 @@ pip install progressbar \
     pycountry \
     simplejson \
     powerline-status
+    
+# suds for python3
+pip install bitbucket.org/jurko/suds/get/tip.tar.gz
 
 # some folder stuff
 mkdir .ssh
