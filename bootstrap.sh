@@ -35,7 +35,6 @@ brew install \
     tree \
     sshuttle \
     watch \
-    mongodb \
     redis \
     libxml2 \
     libyaml \
@@ -56,6 +55,10 @@ brew install \
     derailed/k9s/k9s \
     derailed/popeye/popeye \
     fzf
+    
+# add mongodb
+brew tap mongodb/brew
+brew install mongodb-community@4.2
 
 # vim special
 brew install macvim
