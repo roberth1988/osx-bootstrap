@@ -48,7 +48,8 @@ brew install \
     dialog \
     httpie \
     wrk \
-    fzf
+    fzf \
+    go
     
 # add mongodb
 brew tap mongodb/brew
