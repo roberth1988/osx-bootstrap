@@ -48,12 +48,6 @@ brew install \
     dialog \
     httpie \
     wrk \
-    kubectx \
-    kube-ps1 \
-    kubectl \
-    stern \
-    derailed/k9s/k9s \
-    derailed/popeye/popeye \
     fzf
     
 # add mongodb
@@ -69,10 +63,11 @@ brew install zsh
 brew install zsh-completions
 
 # kubernetes specific
-brew tap derailed/k9s && brew install k9s
 brew install kube-ps1 \
     kubectx \
-    stern
+    stern \
+    derailed/k9s/k9s \
+    derailed/popeye/popeye
 
 # install cask
 brew install cask
@@ -211,7 +206,7 @@ export PATH=~/.ellipsis/bin:$PATH
 
 # install custom settings
 dialog --title "Install dotfiles" \
---backtitle "ellipsis.sh roberth1988/files repository installation" \
+--backtitle "ellipsis install roberth1988/files " \
 --yesno "Do you want to install the roberth1988/files?" 7 60
 
 response=$?
