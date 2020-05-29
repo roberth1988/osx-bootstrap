@@ -49,8 +49,9 @@ brew install \
     httpie \
     wrk \
     fzf \
-    go
-    
+    go \
+    lnav
+
 # add mongodb
 brew tap mongodb/brew
 brew install mongodb-community@4.2
