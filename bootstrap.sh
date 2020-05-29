@@ -75,6 +75,10 @@ brew install kube-ps1 \
 brew install cask
 brew cask install java
 
+# add glance quicklook plugin
+# You must start /Applications/Glance.app once manually to setup the QuickLook plugin.
+brew cask install glance
+
 # install necessary pip modules
 pip install progressbar \
     pyOpenSSL \
