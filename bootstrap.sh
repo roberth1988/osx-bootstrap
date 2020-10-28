@@ -56,6 +56,10 @@ brew install \
 brew tap mongodb/brew
 brew install mongodb-community@4.2
 
+# add duf
+brew tap muesli/tap
+brew install duf
+
 # vim special
 brew install macvim
 
