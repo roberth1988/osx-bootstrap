@@ -69,7 +69,8 @@ brew install kube-ps1 \
     kubectx \
     stern \
     derailed/k9s/k9s \
-    derailed/popeye/popeye
+    derailed/popeye/popeye \
+    sunny0826/tap/kubecm
 
 # install cask
 brew install cask
