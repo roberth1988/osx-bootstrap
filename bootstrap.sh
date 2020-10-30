@@ -84,6 +84,10 @@ brew cask install java
 # You must start /Applications/Glance.app once manually to setup the QuickLook plugin.
 brew cask install glance
 
+# Golang specific stuff
+brew tap go-swagger/go-swagger
+brew install go-swagger
+
 # install necessary pip modules
 pip install progressbar \
     pyOpenSSL \
