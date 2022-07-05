@@ -52,6 +52,9 @@ brew install \
     go \
     lnav
 
+# display arrangement
+brew tap jakehilborn/jakehilborn && brew install displayplacer
+
 # add mongodb
 brew tap mongodb/brew
 brew install mongodb-community@4.2
